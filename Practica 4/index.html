@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica4</title>
+</head>
+<body> 
+    <p>Imagen avif</p>
+    <img src="Capitan-america.jpg" alt="">
+    <p>Imagen jpg</p>
+    <img src="Capitan america 2.jpg" alt="">
+    <p>Imagen PNG</p>
+    <img src="Capitan-america 3.png" alt="">
+    <p>Imagen Web p</p>
+    <img src="Capitan-america 3 (1).webp" alt="">
+    <style>
+        body {
+            background: linear-gradient(135deg, #232526 0%, #00c3ff 100%);
+            color: #eaeaea;
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .cv-main {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 980px;
+            margin: 32px auto;
+            background: rgba(34, 36, 38, 0.98);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .cv-left, .cv-right {
+            padding: 28px 18px;
+            flex: 1 1 340px;
+            min-width: 260px;
+        }
+        .cv-left {
+            background: linear-gradient(135deg, #00c3ff 0%, #232526 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .cv-left::before {
+            content: "";
+            position: absolute;
+            top: -40px; left: -40px;
+            width: 120px; height: 120px;
+            background: radial-gradient(circle, #ff6a00 0%, #00c3ff 80%);
+            opacity: 0.18;
+            z-index: 0;
+            border-radius: 50%;
+        }
+        .photo {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 24px #ff6a0055;
+            margin-bottom: 18px;
+            border: 4px solid #ff6a00;
+            background: #222;
+            position: relative;
+            z-index: 1;
+            transition: box-shadow 0.3s;
+        }
+        h1 {
+            color: #fff;
+            font-size: 1.6em;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+            text-align: center;
+            font-weight: 700;
+            text-shadow: 0 2px 8px #222;
+        }
+        .subtitle {
+            color: #ffe3c2;
+            font-size: 1em;
+            margin-bottom: 12px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-start;
+            width: 100%;
+            z-index: 1;
+            font-size: 0.98em;
+        }
+        .info-list li {
+            color: #fff;
+            background: linear-gradient(90deg, #ff6a00 0%, #00c3ff 100%);
+            border-radius: 7px;
+            padding: 5px 12px;
+            box-shadow: 0 2px 8px #ff6a0033;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+        }
+        .info-list strong {
+            color: #232526;
+            font-weight: 700;
+        }
+        .section-title {
+            color: #ff6a00;
+            font-size: 1em;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #ff6a0033;
+            padding-bottom: 3px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .cv-right {
+            background: linear-gradient(135deg, #232526 0%, #00c3ff 100%);
+            color: #eaeaea;
+            position: relative;
+        }
+        .cv-right::before {
+            content: "";
+            position: absolute;
+            bottom: -40px; right: -40px;
+            width: 120px; height: 120px;
+            background: radial-gradient(circle, #00c3ff 0%, #ff6a00 80%);
+            opacity: 0.18;
+            z-index: 0;
+            border-radius: 50%;
+        }
+        .exp-item, .edu-item, .cert-item, .lang-item {
+            margin-bottom: 12px;
+            background: #232526;
+            border-radius: 8px;
+            padding: 8px 12px;
+            box-shadow: 0 2px 8px #00c3ff22;
+            position: relative;
+            z-index: 1;
+            font-size: 0.97em;
+        }
+        .exp-title, .edu-title, .cert-title, .lang-title {
+            font-weight: bold;
+            color: #00c3ff;
+            font-size: 1em;
+        }
+        .exp-date, .edu-date, .cert-date {
+            color: #ff6a00;
+            font-size: 0.95em;
+            margin-left: 6px;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 4px;
+            justify-content: flex-start;
+            z-index: 1;
+            font-size: 0.97em;
+        }
+        .skill {
+            background: linear-gradient(90deg, #ff6a00 0%, #00c3ff 100%);
+            color: #fff;
+            border-radius: 7px;
+            padding: 5px 12px;
+            font-weight: 500;
+            box-shadow: 0 2px 8px #ff6a0033;
+            transition: background 0.3s;
+            white-space: nowrap;
+        }
+        .skill:hover {
+            background: linear-gradient(90deg, #00c3ff 0%, #ff6a00 100%);
+        }
+        @media (max-width: 900px) {
+            .cv-main {
+                flex-direction: column;
+            }
+            .cv-left, .cv-right {
+                min-width: unset;
+                padding: 18px 6px;
+            }
+        }
+    </style>
+    <div class="cv-main">
+        <div class="cv-left"></div>
+            <img src="Peacemaker.webp" alt="Fotografía de Jorge Negrete" class="photo">
+            <h1>Jorge Negrete</h1>
+            <div class="subtitle">Desarrollador Web | Ingeniero de Software</div>
+            <ul class="info-list">
+                <li><strong>Email:</strong> jorge.negrete@email.com</li>
+                <li><strong>Tel:</strong> +52 477 123 4567</li>
+                <li><strong>Ubicación:</strong> León, Guanajuato</li>
+                <li><strong>LinkedIn:</strong> linkedin.com/in/jorgenegrete</li>
+                <li><strong>GitHub:</strong> github.com/jorgenegrete</li>
+                <li><strong>Edad:</strong> 18 años</li>
+            </ul>
+            <div class="section-title">Habilidades</div>
+            <div class="skills-list">
+                <span class="skill">HTML5</span>
+                <span class="skill">CSS3</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">React</span>
+                <span class="skill">TypeScript</span>
+                <span class="skill">Git & GitHub</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Cloud Computing</span>
+                <span class="skill">Figma</span>
+                <span class="skill">Scrum</span>
+                <span class="skill">Trabajo en equipo</span>
+                <span class="skill">Comunicación</span>
+                <span class="skill">Inglés B2</span>
+                <span class="skill">Solución de problemas</span>
+            </div>
+            <div class="section-title">Idiomas</div>
+            <div class="lang-item"><span class="lang-title">Español</span> - Nativo</div>
+            <div class="lang-item"><span class="lang-title">Inglés</span> - Intermedio (B2)</div>
+            <div class="section-title">Certificaciones</div>
+            <div class="cert-item"></div>
+                <span class="cert-title">Scrum Master</span> <span class="cert-date">| 2023</span>
+            </div>
+            <div class="cert-item"></div>
+                <span class="cert-title">React Developer</span> <span class="cert-date">| 2022</span>
+            </div>
+        </div>
+        <div class="cv-right">
+            <div class="section-title">Perfil Profesional</div>
+            <p>
+                Ingeniero de software con 5+ años de experiencia en desarrollo web, especializado en aplicaciones modernas, automatización y cloud. Creativo, proactivo y orientado a resultados, con capacidad para liderar proyectos y trabajar en equipos multidisciplinarios.
+            </p>
+            <div class="section-title">Experiencia Laboral</div>
+            <div class="exp-item">
+                <span class="exp-title">Desarrollador Frontend Senior</span> <span class="exp-date">| Tech Solutions | 2022 - Actualidad</span>
+                <ul>
+                    <li>Diseño y desarrollo de interfaces web escalables (React, TypeScript).</li>
+                    <li>Implementación de CI/CD y metodologías ágiles.</li>
+                    <li>Optimización de rendimiento y accesibilidad.</li>
+                </ul>
+            </div>
+            <div class="exp-item">
+                <span class="exp-title">Ingeniero de Software Junior</span> <span class="exp-date">| Web Innovators | 2020 - 2022</span>
+                <ul>
+                    <li>Desarrollo de nuevas funcionalidades en plataformas web.</li>
+                    <li>Integración de APIs REST y servicios cloud.</li>
+                    <li>Soporte y mantenimiento de sistemas legacy.</li>
+                </ul>
+            </div>
+            <div class="exp-item">
+                <span class="exp-title">Practicante de Desarrollo</span> <span class="exp-date">| SoftDev León | 2019 - 2020</span>
+                <ul>
+                    <li>Colaboración en proyectos internos y prototipos.</li>
+                    <li>Documentación técnica y pruebas de software.</li>
+                </ul>
+            </div>
+            <div class="section-title">Educación</div>
+            <div class="edu-item">
+                <span class="edu-title">Grado en Ingeniería Informática</span> <span class="edu-date">| Universidad de Guanajuato | 2016 - 2020</span>
+            </div>
+            <div class="edu-item">
+                <span class="edu-title">Diplomado en Desarrollo Web</span> <span class="edu-date">| Platzi | 2021</span>
+            </div>
+        </div>
+    </div></div>
+    
+</body>
+</html>
