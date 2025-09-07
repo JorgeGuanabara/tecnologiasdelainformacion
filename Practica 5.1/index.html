@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 5.1</title>
+</head>
+<body>
+<h1>Lista de reproducción playlist</h1>
+<div class="playlist-grid">
+    <div class="video">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/arimmi8AYJ0?si=xyj7pLWNCoGAF6Pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Video 1</p>
+    </div>
+    <div class="video">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/tVPOmMOL6TA?si=QCd8tb0E2HQFnUYF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Video 2</p>
+    </div>
+    <div class="video">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/mo5_gznMagA?si=xb9qKhcspIvLSdgd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Video 3</p>
+    </div>
+    <div class="video">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/arimmi8AYJ0?si=xyj7pLWNCoGAF6Pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Video 4</p>
+    </div>
+    <div class="video">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/tVPOmMOL6TA?si=QCd8tb0E2HQFnUYF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Video 5</p>
+    </div>
+    <div class="video">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/mo5_gznMagA?si=xb9qKhcspIvLSdgd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Video 6</p>
+    </div>
+    <div class="video">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/arimmi8AYJ0?si=xyj7pLWNCoGAF6Pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Video 7</p>
+    </div>
+    <div class="video">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/tVPOmMOL6TA?si=QCd8tb0E2HQFnUYF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Video 8</p>
+    </div>
+    <div class="video">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/mo5_gznMagA?si=xb9qKhcspIvLSdgd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Video 9</p>
+    </div>
+</div>
+<style>
+body {
+    background: linear-gradient(135deg, #f4f4f9 0%, #e0e7ff 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    color: #4f46e5;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    text-shadow: 1px 2px 8px #b3bcf5;
+}
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+.video {
+    background: linear-gradient(135deg, #f0abfc 0%, #818cf8 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(79,70,229,0.10);
+    padding: 18px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 2px solid #a5b4fc;
+}
+.video:hover {
+    box-shadow: 0 8px 32px rgba(79,70,229,0.18);
+    transform: translateY(-6px) scale(1.03);
+}
+.video p {
+    margin: 12px 0 0 0;
+    font-weight: 600;
+    color: #4f46e5;
+    font-size: 1.15em;
+    text-align: center;
+    text-shadow: 0 1px 6px #f0abfc99;
+}
+iframe {
+    border-radius: 10px;
+    border: 2px solid #a5b4fc;
+    margin-bottom: 0;
+    box-shadow: 0 2px 12px #818cf855;
+}
+</style>
+    
+  
+  
+
+
+
+
+</body>
+</html>
