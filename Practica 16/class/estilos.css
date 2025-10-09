@@ -1,0 +1,107 @@
+body {
+    background-color: lightblue;
+}
+ 
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+ 
+.item {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+ 
+}
+ 
+.item:hover {
+    background-color: #40325e;
+    transform: scale(1.2);
+    transition: transform 0.5s, background-color 0.2s;
+    cursor: pointer;
+    color: white;
+}
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7,
+.item8,
+.item9 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 180px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Individual backgrounds and grid positions */
+.item1 {
+    background-image: url('https://tse2.mm.bing.net/th/id/OIP.fRzELJDJaKQdce42tKOkqAHaDG?pid=Api&P=0&h=180');
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-color: #ff9999;
+}
+.item2 {
+    background-image: url('https://tse1.mm.bing.net/th/id/OIP.hgq-qqoaLflO-Qyqi30scgHaJP?pid=Api&P=0&h=180');
+}
+.item3 {
+    background-image: url('https://www.themoviedb.org/t/p/original/npUCnxl1fqgt3aQiMQq0iJdZMZp.jpg');
+    grid-column: 4/5;
+    grid-row: 1/3;
+    background-color: #99ff99;
+}
+.item4 {
+    background-image: url('https://tse1.mm.bing.net/th/id/OIP.ETFQy_kiESTdLcdYrGbG8gHaEK?pid=Api&P=0&h=180');
+}
+.item5 {
+    background-image: url('https://tse4.mm.bing.net/th/id/OIP._Lj5Iko6-Kd03DvUi7FaCwHaK-?pid=Api&P=0&h=180');
+}
+.item6 {
+    background-image: url('https://tse3.mm.bing.net/th/id/OIP.S4JJRqdk3RVcJK9UaGDlQwHaJQ?pid=Api&P=0&h=180');
+}
+.item7 {
+    background-image: url('https://tse4.mm.bing.net/th/id/OIP.CJplUpgeV3Xe7zKy7zMrxwHaF0?pid=Api&P=0&h=180');
+}
+.item8 {
+    background-image: url('https://m.media-amazon.com/images/M/MV5BNzM3NDFhYTAtYmU5Mi00NGRmLTljYjgtMDkyODQ4MjNkMGY2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg');
+}
+.item9 {
+    background-image: url('https://tse3.mm.bing.net/th/id/OIP.iRyzbC8BlPbaVR7zvg_XUAHaDR?pid=Api&P=0&h=180');
+    background-color: #e15725;
+    grid-column: 1/5;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .item1,
+    .item3 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .item9 {
+        grid-column: auto;
+    }
+}
+ 
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
+}
