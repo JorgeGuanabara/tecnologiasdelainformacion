@@ -1,0 +1,150 @@
+/* Fondo y estilo general */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("https://mx.images.search.yahoo.com/images/view;_ylt=AwrO5scdIglpcXQOGbHF8Qt.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkA2QwZDU0ZjU3M2U2YzUwMmE0NzJhZGU4NDUyNTE4ODE0BGdwb3MDMTQEaXQDYmluZw--?back=https%3A%2F%2Fmx.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dle%25C3%25B3n%2Bguanajuato%26ei%3DUTF-8%26type%3DE210MX885G0-E210MX885G0%26fr%3Dmcafee%26fr2%3Dsa-gp-search%26tab%3Dorganic%26ri%3D14&w=700&h=510&imgurl=www.sinmapa.net%2Fwp-content%2Fuploads%2F2018%2F02%2FArco-triunfo-leon-guanajuato-mexico.jpg&rurl=http%3A%2F%2Fwww.sinmapa.net%2Fver-leon-guanajuato%2F&size=63KB&p=le%C3%B3n+guanajuato&oid=d0d54f573e6c502a472ade8452518814&fr2=sa-gp-search&fr=mcafee&tt=QU%C3%89+VER+en+LE%C3%93N%2C+GUANAJUATO+%5BM%C3%A9xico%5D+-+Sinmapa&b=0&ni=160&no=14&ts=&tab=organic&sigr=3K6d6_b6EESA&sigb=2Hy.aCQhArOl&sigi=jujTxhQ9Zdbb&sigt=KaWT1_.JBVxN&.crumb=iFZeAdHaUaM&fr=mcafee&fr2=sa-gp-search&type=E210MX885G0-E210MX885G0");
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+}
+
+/* Contenedor principal */
+.menu-container {
+    padding: 20px;
+    background-image: url("https://www.sinmapa.net/wp-content/uploads/2018/02/Arco-triunfo-leon-guanajuato-mexico.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #FFEB3B;
+    text-shadow: 2px 2px 4px #000;
+}
+
+header p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 110px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #FF0000;
+    margin-bottom: 10px;
+}
+
+/* Grid de menú */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+/* Cada elemento */
+.item {
+    background: rgba(51, 36, 36, 0.15);
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+/* Imagen del platillo */
+.item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* mantiene proporción, recorta exceso */
+    border-radius: 8px;
+    border: 2px solid #0a0a0a;
+}
+
+/* Texto */
+.item h3 {
+    margin: 10px 0 5px;
+    color: #ffe600;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffae00;
+}
+
+/* Mobile */
+@media(max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+    
+    .item img {
+        height: 150px;
+    }
+}
+/* Sección guisos */
+.titulo-guisos {
+    text-align: center;
+    color: #7d0808;
+    font-size: 24px;
+    margin-top: 25px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Grid para lista de guisos */
+.guisos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.guiso {
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid #000000;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #020000;
+    border-radius: 8px;
+    text-shadow: 1px 1px 2px #000;
+}
+.guiso:hover {
+    background: rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+.guisos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    padding: 15px;
+    background: #d18b1a;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(243, 13, 13, 0.2) 10px,
+        rgba(243, 1, 1, 0.2) 20px
+    );
+    border-radius: 12px;
+    border: 3px solid #D62828;
+}
+
+.guiso {
+    background: rgba(0, 0, 0, 0.35);
+}
